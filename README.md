@@ -14,36 +14,15 @@ Pokud apache vrací "active - running" můžeme se přesunout na tvorbu samotné
 Fryčták, Jaročová, Kalič
 
 
-276 ls
-277 ls -li
-278 rm ahoj.pdf
-279 mv aho.pdf ahoj.pdf
-280 ls
-281 ls -li
-282 clear
-283 systemctl poweroff
-284 sudo systemctl poweroff
-285 clear
 286 sudo apt install apache
 287 sudo apt install apache2
-288 sudo ufw app list
-289 sudo apt install ufw
-290 sudo ufw app list
-291 sudo ufw allow Apache
-292 sudo apt update
-293 sudo ufw allow 'Apache'
-294 sudo ufw app list
+
 295 sudo systemctl status apache2
-296 hostname - I
-297
-1s
+
 298 cd /
-299 1s
-300
-cd var/html
+300 cd var/html
 301 cd var
-302
-1s
+
 303 cd www
 304
 ls
