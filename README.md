@@ -1,0 +1,2 @@
+# LinuxStaticWebServer
+Fryčták, Jaročová, Kalič
