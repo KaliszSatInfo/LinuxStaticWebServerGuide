@@ -1,4 +1,4 @@
-# LinuxStaticWebServer
+# LinuxStaticWebServerGuide
 Instalcace linuxového webového serveru se statickou IP adresou
 
 1. Instalace apache2
