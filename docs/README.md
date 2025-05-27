@@ -1,16 +1,27 @@
 # LinuxStaticWebServerGuide
-Instalcace linuxového webového serveru se statickou IP adresou
+- Instalcace linuxového webového serveru se statickou IP adresou
+- Obchodní Akademie Uherské Hradiště | Jan Fryšták, Daniela Jarošová, Jan kalisz 
 
-1. Instalace apache2
-- sudo apt install apache2
-- sudo systemctl status apache2
+
+
+
+
+
+
+Předpokládáné požadavky:
+- Připravený server nebo virtuální stroj s Linuxovou distribucí
+
+1. Instalace apache web serveru
+- nejdřív nainstalujeme 
+"sudo apt install apache2"
+"sudo systemctl status apache2"
 
 Pokud apache vrací "active - running" můžeme se přesunout na tvorbu samotné webové stránky
 
 2.  
 
 
-
+DATOVÉ TYPY
 Fryčták, Jaročová, Kalič
 
 
