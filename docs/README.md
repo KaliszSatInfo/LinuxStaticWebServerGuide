@@ -66,11 +66,11 @@ Potřebné materiály
     </html>``
 
 3. Nastavení statické IP adresy
-    3.A.1 Zjistíme naše síť. rozhraní
+    3.1 Zjistíme naše síť. rozhraní
         ``ip a``                                <-- vypíše název našeho síťového rozhraní
         - výstup např. __en0s3__
 
-    3.A.2 Upravíme síťovou konfiguraci 
+    3.2 Upravíme síťovou konfiguraci 
         ``sudo nano /etc/network/interfaces``   <-- otevřeme konfiguraci
 
         Doplníme podle následujícího vzoru (pro rozhraní s jmnénem __en0s3__ ):
@@ -90,7 +90,7 @@ Potřebné materiály
         ``                                  
         A uložíme (ctrl o)
 
-    3.A.3 Restartujeme síťové služby a ověříme změny
+    3.3 Restartujeme síťové služby a ověříme změny
         ``sudo systemctl restart networking``   <-- restartuje síť služby
         ``ip a``                                
         ``hostname -I``  
