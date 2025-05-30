@@ -6,9 +6,9 @@
 
 
 ## 2.
-- Tento projekt se zaměřuje na práci s webovým serverem Apache na systém GNU/Linux.
+- Tento projekt se zaměřuje na práci s webovým serverem Apache na systém GNU/Linux
 Hlavním cílem je zprovoznit jednoduchý webový server, který bude dosažitelný na lokální síti pod staticky nastavenou IP adresou. 
-- Projekt byl zvolen kvůli své praktické využitelnosti, a poměrné jednoduchosti zpracování
+- Projekt byl zvolen kvůli své praktické využitelnosti a poměrně jednoduchému zpracování
 
 - proč Apache?:
     - zpětná kompabilita a dlouhodobá podpora
@@ -21,12 +21,12 @@ Hlavním cílem je zprovoznit jednoduchý webový server, který bude dosažitel
 
 Cíl projektu
 -zprovoznit Apache serveru v Linuxovém prostředí
--nastavit statickou IP adresu pro přístup 
+-nastavit statickou IP adresu pro přístup k webu
 -vytvořit jednodhucou HTML stránku
 -ověřit funkčnost přístupu ke stránce
 
 Potřebné materiály
--Virtuální stroj s Linux distribucí využívající správce bálíčků `apt`
+-virtuální stroj s Linux distribucí využívající správce bálíčků `apt`
 -textový editor (např. nano)
 -správná síťová konfigurace ve VirtualBoxu
 -připojení k internetu pro instalaci balíčku apt
@@ -40,11 +40,11 @@ Potřebné materiály
 
     1.2 Kontrola funkčnosti a řešení problémů
         Pokud apache vrací "active - running" můžeme se přesunout na tvorbu samotné webové stránky
-        Pokud ne skusíme
+        Pokud apache neběží, zkusíme:
 
         ``sudo systemctl start apache2``
 
-        A jestli chceme automaticky spouštět službu na staru:
+        A jestli chceme automaticky spouštět službu na startu:
 
         ``sudo systemctl enable apache2``
 
