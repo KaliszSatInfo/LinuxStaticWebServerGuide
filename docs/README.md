@@ -121,8 +121,8 @@ Závěr
 - Překvapení při práci:
     - Stáhnutí špatného balíčku apache (apache místo apache2)
 
-- Alternatiy:
-    -Místo výchozího správce rozhraní System-Network, by jsme mohli využít jeho novější verzi, Systemd-Networkd
+- Alternativy:
+    - Místo výchozího správce rozhraní System-Network, by jsme mohli využít jeho novější verzi, Systemd-Networkd
         + Modernější architektura s více funkcemi
         - Komplexní řešení 
     -Místo Apache mohl být použit jiný webserver, např. Nginx
