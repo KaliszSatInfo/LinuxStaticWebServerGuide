@@ -1,6 +1,6 @@
 # LinuxStaticWebServerGuide
 ## 1.
-Instalcace linuxového webového serveru se statickou IP adresou 
+Instalace linuxového webového serveru se statickou IP adresou 
 - Obchodní Akademie Uherské Hradiště | Jan Fryšták, Daniela Jarošová, Jan Kalisz 
 - Datum zpracování: Květen 2025
 
@@ -9,7 +9,7 @@ Instalcace linuxového webového serveru se statickou IP adresou
 - Hlavním cílem je zprovoznit jednoduchý webový server, který bude přístupný na lokální síti pod staticky nastavenou IP adresou. 
 - Projekt byl zvolen kvůli své praktické využitelnosti a poměrně jednoduchému zpracování
 
-- Proč Apache?:
+- Proč Apache?
     - Zpětná kompabilita a dlouhodobá podpora
     - Široce používaný a podrobně dokumentovaný 
     - Podpora statických webů 
@@ -43,7 +43,7 @@ Potřebné materiály
 
        sudo systemctl start apache2
 
-        A jestli chceme automaticky spouštět službu na startu:
+    A jestli chceme automaticky spouštět službu na startu:
 
         sudo systemctl enable apache2
 
@@ -132,7 +132,7 @@ Závěr
 - Doporučení: Zkontrolovat umístění síťové konfigurace na vaší distribuci a ujistit se, že adresa je skutečně statická
 
 - Možná rozšíření:
-    - HTTPS certifikase (pomocí např. Let`s Encrypt)
+    - HTTPS certifikase (pomocí např. Let's Encrypt)
     - Zkusit nasadit více webů najednou
     - Automatizovat deployment pomocí skriptu
 
