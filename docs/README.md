@@ -1,60 +1,59 @@
 # LinuxStaticWebServerGuide
 ## 1.
-- Instalcace linuxového webového serveru se statickou IP adresou 
+Instalcace linuxového webového serveru se statickou IP adresou 
 - Obchodní Akademie Uherské Hradiště | Jan Fryšták, Daniela Jarošová, Jan Kalisz 
 - Datum zpracování: Květen 2025
 
 
 ## 2.
-- Tento projekt se zaměřuje na práci s webovým serverem Apache na systém GNU/Linux.
-Hlavním cílem je zprovoznit jednoduchý webový server, který bude dosažitelný na lokální síti pod staticky nastavenou IP adresou. 
-- Projekt byl zvolen kvůli své praktické využitelnosti, a poměrné jednoduchosti zpracování
+- Tento projekt se zaměřuje na práci s webovým serverem Apache na operačním systému GNU/Linux
+Hlavním cílem je zprovoznit jednoduchý webový server, který bude přístupný na lokální síti pod staticky nastavenou IP adresou. 
+- Projekt byl zvolen kvůli své praktické využitelnosti a poměrně jednoduchému zpracování
 
-- proč Apache?:
-    - zpětná kompabilita a dlouhodobá podpora
-    - široce používaný a dobře dokumentovaný
-    - dobrá podpora pro statické weby
-    - umožňuje rozjet více serverů pomocí virtuálních hostů
-    - Open source
-    
- Dále popíšeme potřebné předpoklady, kroky instalace, jak ověřit funkčnost a rozdělení práce naší skupiny
+- Proč Apache?:
+    - Zpětná kompabilita a dlouhodobá podpora
+    - Široce používaný a podrobně dokumentovaný 
+    - Podpora statických webů 
+    - Umožňuje progoz více serverů zároveň pomocí virtuálních hostů
+    - Je Open source
 
-Cíl projektu
--zprovoznit Apache serveru v Linuxovém prostředí
--nastavit statickou IP adresu pro přístup 
--vytvořit jednodhucou HTML stránku
--ověřit funkčnost přístupu ke stránce
+
+<b>Cíl projektu</b>
+
+- Zprovoznit Apache na Linuxovém serveru
+- Nastavit statickou IP adresu pro přístup k webu
+- Vytvořit jednodhucou HTML stránku
+- Ověřit funkčnost přístupu ke stránce
 
 Potřebné materiály
--Virtuální stroj s Linux distribucí využívající správce bálíčků `apt`
--textový editor (např. nano)
--správná síťová konfigurace ve VirtualBoxu
--připojení k internetu pro instalaci balíčku apt
+- Virtuální stroj s Linuxovou distribucí využívající správce bálíčků `apt`
+- Textový editor (např. nano)
+- Správná síťová konfigurace ve VirtualBoxu
+- Připojení k internetu pro instalaci balíčku apt
 
 ## 3
 1. Instalace apache web serveru
     1.1. Samotná instalace
-        ``sudo apt update ``                 <-- aktualizuje dostupné balíčky
-        ``sudo apt install apache2``         <-- stáhne balíček apache2
-        ``sudo systemctl status apache2``    <-- zkontroluje jestli byl balíček úspěšně instalován
+        ``sudo apt update ``                 <-- Aktualizuje dostupné balíčky
+        ``sudo apt install apache2``         <-- Stáhne balíček apache2
+        ``sudo systemctl status apache2``    <-- zkontroluje, jestli byl balíček úspěšně nainstalován
 
     1.2 Kontrola funkčnosti a řešení problémů
-        Pokud apache vrací "active - running" můžeme se přesunout na tvorbu samotné webové stránky
-        Pokud ne skusíme
+        Pokud apache vrací "active - running", můžeme se přesunout na tvorbu samotné webové stránky.
+        Pokud apache neběží, zkusíme:
 
-        ``sudo systemctl start apache2``
+       sudo systemctl start apache2
 
-        A jestli chceme automaticky spouštět službu na staru:
+        A jestli chceme automaticky spouštět službu na startu:
 
-        ``sudo systemctl enable apache2``
-
+        sudo systemctl enable apache2
 
 2.  Vytvoření HTML stránky
-    ``cd  /var/www/html``                   <-- přesun do správné pod-složky
-    ``sudo nano index.html``                <-- vytvoření a editování naší HTML stránky
+    ``cd  /var/www/html``                   <-- Přesun do správné pod-složky
+    ``sudo nano index.html``                <-- Vytvoření a editace naší HTML stránky
 
-        Príklad jednoduché stránky:
-    ``
+Příklad jednoduché stránky:
+    
     <!DOCTYPE html>
     <html>
     <head>
@@ -63,19 +62,19 @@ Potřebné materiály
     <body>
         <h1>Apache běží!</h1>
     </body>
-    </html>``
+    </html>
 
 3. Nastavení statické IP adresy
     3.1 Zjistíme naše síť. rozhraní
-        ``ip a``                                <-- vypíše název našeho síťového rozhraní
+        ``ip a``                                <-- Vypíše název našeho síťového rozhraní
         - výstup např. __en0s3__
 
     3.2 Upravíme síťovou konfiguraci 
-        ``sudo nano /etc/network/interfaces``   <-- otevřeme konfiguraci
+        ``sudo nano /etc/network/interfaces``   <-- Otevřeme konfiguraci
 
-        Doplníme podle následujícího vzoru (pro rozhraní s jmnénem __en0s3__ ):
+    Doplníme podle následujícího vzoru (pro rozhraní s jmnénem __en0s3__ ):
 
-        ``
+        
         source /etc/network/interfaces.d/*          
 
         auto lo
@@ -87,15 +86,14 @@ Potřebné materiály
             gateway 192.168.1.1                         <--
 
         iface enp0s3 inet6 auto                 
-        ``                                  
-        A uložíme (ctrl o)
+                                          
+   A uložíme (ctrl o)
 
     3.3 Restartujeme síťové služby a ověříme změny
-        ``sudo systemctl restart networking``   <-- restartuje síť služby
+        ``sudo systemctl restart networking``   <-- Restartuje síť služby
         ``ip a``                                
         ``hostname -I``  
-
-    Alternativně můžeme použít                        
+                       
         
 4. Testování v síti
 - Na jiném zařízení v síťi otevřeme prohlížeč a zadáme IP adresu našeho serveru
@@ -123,13 +121,13 @@ Závěr
 - Překvapení při práci:
     - Stáhnutí špatného balíčku apache (apache místo apache2)
 
-- Alternatiy:
-    -Místo výchozího správce rozhraní System-Network, by jsme mohli využít jeho novější verzi, Systemd-Networkd
-        +Modernější architektura s více funkcemi
-        -O trochu komplexnější
+- Alternativy:
+    - Místo výchozího správce rozhraní System-Network, by jsme mohli využít jeho novější verzi, Systemd-Networkd
+        + Modernější architektura s více funkcemi
+        - Komplexní řešení 
     -Místo Apache mohl být použit jiný webserver, např. Nginx
-        +nižší spotřeba paměti
-        -menší podpora dokumentace pro začátečníky
+        + Nižší spotřeba paměti
+        - Menší podpora dokumentace pro začátečníky
 
 - Doporučení: Zkontrolovat umístění síťové konfigurace na vaší distribuci a ujistit se, že adresa je skutečně statická
 
