@@ -67,11 +67,15 @@ Příklad jednoduché stránky:
     </html>
 
 3. Nastavení statické IP adresy
+   <br>
     3.1 Zjistíme naše síť. rozhraní
+   <br>
         ``ip a``                                <-- Vypíše název našeho síťového rozhraní
+   <br>
         - výstup např. __en0s3__
 
-    3.2 Upravíme síťovou konfiguraci 
+    3.2 Upravíme síťovou konfiguraci
+   <br>
         ``sudo nano /etc/network/interfaces``   <-- Otevřeme konfiguraci
 
     Doplníme podle následujícího vzoru (pro rozhraní s jmnénem __en0s3__ ):
@@ -92,12 +96,16 @@ Příklad jednoduché stránky:
    A uložíme (ctrl o)
 
     3.3 Restartujeme síťové služby a ověříme změny
+   <br>
         ``sudo systemctl restart networking``   <-- Restartuje síť služby
-        ``ip a``                                
-        ``hostname -I``  
+   <br>
+        ``ip a``
+   <br>                               
+        ``hostname -I``
+   <br>
                        
         
-4. Testování v síti
+5. Testování v síti
 - Na jiném zařízení v síťi otevřeme prohlížeč a zadáme IP adresu našeho serveru
 - Pokud se zobrazí naše HTML stránka, server je úspěšně funkční
 
