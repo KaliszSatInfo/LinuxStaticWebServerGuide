@@ -99,6 +99,7 @@ Příklad jednoduché stránky:
    <br>
         ``sudo systemctl restart networking``   <-- Restartuje síť služby
    <br>
+   <br>
         ``ip a``
    <br>                               
         ``hostname -I``
