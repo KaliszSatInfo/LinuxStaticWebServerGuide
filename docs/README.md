@@ -33,7 +33,9 @@ Potřebné materiály
 ## 3
 1. Instalace apache web serveru
     1.1. Samotná instalace
+   <br>
         ``sudo apt update ``                 <-- Aktualizuje dostupné balíčky
+   <br>
         ``sudo apt install apache2``         <-- Stáhne balíček apache2
         ``sudo systemctl status apache2``    <-- zkontroluje, jestli byl balíček úspěšně nainstalován
 
@@ -47,7 +49,7 @@ Potřebné materiály
 
         sudo systemctl enable apache2
 
-2.  Vytvoření HTML stránky
+3.  Vytvoření HTML stránky
     ``cd  /var/www/html``                   <-- Přesun do správné pod-složky
     ``sudo nano index.html``                <-- Vytvoření a editace naší HTML stránky
 
