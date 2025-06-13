@@ -30,9 +30,10 @@ Potřebné materiály
 - Správná síťová konfigurace ve VirtualBoxu
 - Připojení k internetu pro instalaci balíčku apt
 
-## 3
+## 3.
 1. Instalace apache web serveru
-    1.1. Samotná instalace
+   <br>
+   1.1. Samotná instalace
    <br>
         ``sudo apt update ``                 <-- Aktualizuje dostupné balíčky
    <br>
@@ -110,13 +111,13 @@ Příklad jednoduché stránky:
 - Na jiném zařízení v síťi otevřeme prohlížeč a zadáme IP adresu našeho serveru
 - Pokud se zobrazí naše HTML stránka, server je úspěšně funkční
 
-## 4
+## 4.
 - ✅ Zprovoznit Apache serveru v Linuxovém prostředí
 - ✅ Nastavit statickou IP adresu pro přístup 
 - ✅ Vytvořit jednodhucou HTML stránku
 - ✅ Ověřit funkčnost přístupu ke stránce
 
-## 5
+## 5.
 Rozdělení práce
 
 | Jméno               | Odpovědnost                                                                 |
@@ -125,7 +126,7 @@ Rozdělení práce
 | Daniela Jarošová    | Grafické a gramatické zkreslení dokumentace, generování souboru PDF         |
 | Jan Kalisz          | Technické vypracování řešení                                                 |
 
-## 6
+## 6.
 Závěr
 
 - Projekt byl úspěšně dokončen. 
@@ -148,7 +149,7 @@ Závěr
     - Zkusit nasadit více webů najednou
     - Automatizovat deployment pomocí skriptu
 
-## 7
+## 7.
 Zdroje:
 
 DEBIAN WIKI. Network Configuration. Online. 2004, 2025-04-17. Dostupné z: https://wiki.debian.org/NetworkConfiguration. [cit. 2025-05-29].
