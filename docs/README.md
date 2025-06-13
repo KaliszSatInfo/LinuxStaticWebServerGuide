@@ -37,6 +37,7 @@ Potřebné materiály
         ``sudo apt update ``                 <-- Aktualizuje dostupné balíčky
    <br>
         ``sudo apt install apache2``         <-- Stáhne balíček apache2
+   <br>
         ``sudo systemctl status apache2``    <-- zkontroluje, jestli byl balíček úspěšně nainstalován
 
     1.2 Kontrola funkčnosti a řešení problémů
